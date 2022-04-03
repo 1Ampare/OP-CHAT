@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Skript">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/Skript.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

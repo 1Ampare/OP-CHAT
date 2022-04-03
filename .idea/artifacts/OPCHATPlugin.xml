@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OPCHATPlugin">
+    <output-path>$PROJECT_DIR$/../test/plugins</output-path>
+    <root id="archive" name="OPCHATPlugin.jar">
+      <element id="module-output" name="PLUGIN" />
+    </root>
+  </artifact>
+</component>
