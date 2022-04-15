@@ -8,6 +8,7 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -86,6 +87,7 @@ public class ChatConfig {
                 TextComponent textComponent = new TextComponent(ChatColor.translateAlternateColorCodes('&', "&f&l[ &6&lOP-CHAT &f&l] &c비활성화 되었습니다.&f"));
                 executor.spigot().sendMessage(ChatMessageType.ACTION_BAR, textComponent);
             }
+            sendDataChangedData(executor);
             return true;
         }else {
             return false;
@@ -109,5 +111,13 @@ public class ChatConfig {
             return config.getString(uid);
         }
         return "[ERROR] NOT SETTING TO NAME - opchat.yml UUID IS NOT CORRECT SETTING";
+    }
+    public static void sendDataChangedData(Player p){
+        SendData sendData = new SendData();
+        if (ChatConfig.getChatMode(p)){
+            sendData.SendData("1",p,Opchat.getPlugin());
+        }else{
+            sendData.SendData("0",p,Opchat.getPlugin());
+        }
     }
 }

@@ -3,6 +3,7 @@ package com.geullo.opchat.Operator;
 import com.geullo.opchat.ChatConfig;
 import com.geullo.opchat.Config;
 import com.geullo.opchat.Opchat;
+import com.geullo.opchat.SendData;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -60,6 +61,7 @@ public class Invisible implements Listener {
                     }else{
                         e.getPlayer().showPlayer(Opchat.getPlugin(),oper);
                     }
+                    ChatConfig.sendDataChangedData(oper);
                 }
             });
         }else{
